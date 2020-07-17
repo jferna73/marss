@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>Mission to Mars</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        
+    </head>
+    <body>
+        <div class="jumbotron text-center container">
+            <h1 class="display-4">Mission to Mars</h1>
+
+            <a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrap New Data</a>
+          </div>
+          <section class = "container">
+              <div>
+                  <h1 class = "pageHeading">Latest Mars News</h1>
+                  <h4>{{  mars_info.news_title  }}</h3>
+                  <p>{{  mars_info.news_title  }}</p>
+              </div>
+              <div class = "row">
+                  <section class = "col-md-7">
+                    <h1>Featured Mars Image</h1>
+                    <a href = "{{  mars_info.featured_image_url  }}" target="_blank">
+                    <img src = "{{  mars_info.featured_image_url  }}" alt = "featured_image" class="img-fluid" width>
+                    </a>
+
+                  </section>
+                  <section class="col-md-1">
+
+                  </section>
+                  <section class="col-md-4 card">
+                      <h4>Current Weather on Mars</h4>
+                      <p>{{  mars_info.mars_weather  }}</p>
+                    <br>
+                    
+                        <h4>Mars Facts</h3>
+                        <table  class="table-bordered">
+                        <thead>
+                            <tr>
+                              <th></th>
+                              <th>Value</th>
+                     
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+        
+                            <td>Equatorial Diameter:</td>
+                            <td>6,792 km</td>
+                            </tr>
+                            <tr>
+          
+                            <td>Polar Diameter:</td>
+                            <td>6,752 km</td>
+                            </tr>
+                            <tr>
+           
+                            <td>Mass:</td>
+                            <td>6.39 × 10^23 kg (0.11 Earths)</td>
+                            </tr>
+                            <tr>
+                      
+                            <td>Moons:</td>
+                            <td>2 (Phobos &amp; Deimos)</td>
+                            </tr>
+                            <tr>
+                
+                            <td>Orbit Distance:</td>
+                            <td>227,943,824 km (1.38 AU)</td>
+                            </tr>
+                            <tr>
+                 
+                            <td>Orbit Period:</td>
+                            <td>687 days (1.9 years)</td>
+                            </tr>
+                            <tr>
+               
+                            <td>Surface Temperature:</td>
+                            <td>-87 to -5 °C</td>
+                            </tr>
+                            <tr>
+                  
+                            <td>First Record:</td>
+                            <td>2nd millennium BC</td>
+                            </tr>
+                            <tr>
+           
+                            <td>Recorded By:</td>
+                            <td>Egyptian astronomers</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </section>
+                            
+
+              </div>
+              <div class="layout-multicolumn container section justify-content-center">
+                  <h4 style = "text-align:center;">Mars Hemispheres</h3>
+                  <hr>
+                  <div class="row" style = "padding:10px">
+                    <section class = "col-md-6 card mx-auto" style = "padding:10px">
+                        <a href="{{  mars_info.hemisphere_images_list[0].img_url  }}" target = "_blank">
+                          <img src = "{{  mars_info.hemisphere_images_list[0].img_url  }}" alt = "{{  mars_info.hemisphere_images_list[0].title  }}" height="300" width="300" class="rounded mx-auto d-block">
+                        </a>        
+                        <h4>{{  mars_info.hemisphere_images_list[1].title  }}</h4>                
+                    </section>
+                    <section class = "col-md-6 card" style = "padding:10px">
+                        
+                        <a href="{{  mars_info.hemisphere_images_list[1].img_url  }}" target = "_blank">
+                          <img src = "{{  mars_info.hemisphere_images_list[1].img_url  }}" alt = "{{  mars_info.hemisphere_images_list[1].title  }}" height="300" width="300" class="rounded mx-auto d-block">
+                        </a>  
+                        <h4>{{  mars_info.hemisphere_images_list[1].title  }}</h4>
+                    </section>
+                  </div>
+                 
+                  <div class="row justify-content-center" style = "padding:10px">
+                    <section class = "col-md-6 card" style = "padding:10px">
+                        
+                        <a href="{{  mars_info.hemisphere_images_list[2].img_url  }}" target = "_blank">
+                          <img src = "{{  mars_info.hemisphere_images_list[2].img_url  }}" alt = "{{  mars_info.hemisphere_images_list[2].title  }}" height="300" width="300" class="rounded mx-auto d-block">
+                        </a>  
+                        <h4>{{  mars_info.hemisphere_images_list[2].title  }}</h4>
+                    </section>
+                    <section class = "col-md-6 card" style = "padding:10px">
+                       
+                        <a href="{{  mars_info.hemisphere_images_list[3].img_url  }}" target = "_blank">
+                          <img src = "{{  mars_info.hemisphere_images_list[3].img_url  }}" alt = "{{  mars_info.hemisphere_images_list[3].title  }}" height="300" width="300" class="rounded mx-auto d-block">
+                        </a>  
+                        <h4>{{  mars_info.hemisphere_images_list[3].title  }}</h4>
+                    </section>
+                      
+                  </div>
+
+                  
+              </div>
+
+
+          </section>
+    </body>
+</html>
